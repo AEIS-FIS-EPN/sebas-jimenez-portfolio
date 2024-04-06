@@ -1,0 +1,73 @@
+p {
+  color: white;
+}
+
+.section {
+  display: flex;
+  width: 100%;
+  height: 590px;
+}
+
+.inner-section {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease;
+
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.inner-section:hover {
+  cursor: pointer;
+  width: 150px;
+  opacity: 0.6;
+  filter: contrast(120%);
+}
+
+.section-image {
+  width: 100%;
+  height: auto;
+  transition: width 0.5s ease, opacity 0.5s ease;
+}
+
+.section-text {
+  font-family: "Yantramanav", sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  font-style: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.initial-text {
+  font-family: "Bungee", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.inner-section:hover .section-image {
+  opacity: 1;
+}
+
+.inner-section:hover .section-text {
+  opacity: 1;
+}
+
+.inner-section:hover .initial-text {
+  opacity: 0;
+}
